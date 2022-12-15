@@ -1,0 +1,16 @@
+ID,Question,Condition,Options,Type,Prereqs,Targets
+1,Review Type,,"Application, Infrastructure, Network, System",Core,,
+2,Is data stored?,,bool,Core,,
+3,Is data processed?,,bool,Core,,
+4,Is data stored on shared server?,isShared,bool,,2,Datastore
+5,Are environment variables used?,usesEnvironmentVariables,bool,,"1=Application, 1=System","Process, Server"
+6,What types of data are stored?,d.format,XML; JSON; HTML; SQL; Text; Other,Core,2,Datastore
+7,What types of data are processed?,d.format,XML; JSON; HTML; SQL; Text; Other,Core,2,Dataflow
+8,Are session tokens used?,usesSessionTokens,bool,,1=Application,Server
+9,Are credentials used?,d.isCredentials,bool,,,"Lambda, Process, Server"
+10,When do the credentials expire?,d.credentialsLife,"Unknown, Short, Medium, Long, Hardcoded",,9,"Datastore, Dataflow"
+11,Is an API Implemented?,implementsAPI,bool,,1=Application,"Process, Lambda"
+12,Which Web Protocols are Implemented?,protocol,HTTP; HTTPS; Other,,1=Application,"Process, Lambda"
+13,Is a VPN used for HTTP Traffic?,usesVPN,bool,,12=HTTP,"Process, Lambda"
+14,Is client-side scripting allowed?,allowsClientSideScripting,bool,,1=Application,Process
+15,,,,,,

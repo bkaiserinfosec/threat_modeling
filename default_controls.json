@@ -1,0 +1,174 @@
+{
+  "authenticatesDestination": {
+    "type": "bool",
+    "description": ""
+  },
+  "authenticatesSource": {
+    "type": "bool",
+    "description": ""
+  },
+  "authenticationScheme": {
+    "type": "text",
+    "description": ""
+  },
+  "authorizesSource": {
+    "type": "bool",
+    "description": ""
+  },
+  "checksDestinationRevocation": {
+    "type": "bool",
+    "description": ""
+  },
+  "checksInputBounds": {
+    "type": "bool",
+    "description": ""
+  },
+  "definesConnectionTimeout": {
+    "type": "bool",
+    "description": ""
+  },
+  "disablesDTD": {
+    "type": "bool",
+    "description": ""
+  },
+  "disablesiFrames": {
+    "type": "bool",
+    "description": ""
+  },
+  "encodesHeaders": {
+    "type": "bool",
+    "description": ""
+  },
+  "encodesOutput": {
+    "type": "bool",
+    "description": ""
+  },
+  "encryptsCookies": {
+    "type": "bool",
+    "description": ""
+  },
+  "encryptsSessionData": {
+    "type": "bool",
+    "description": ""
+  },
+  "handlesCrashes": {
+    "type": "bool",
+    "description": ""
+  },
+  "handlesInterruptions": {
+    "type": "bool",
+    "description": ""
+  },
+  "handlesResourceConsumption": {
+    "type": "bool",
+    "description": ""
+  },
+  "hasAccessControl": {
+    "type": "bool",
+    "description": ""
+  },
+  "implementsAuthenticationScheme": {
+    "type": "bool",
+    "description": ""
+  },
+  "implementsCSRFToken": {
+    "type": "bool",
+    "description": ""
+  },
+  "implementsNonce": {
+    "type": "bool",
+    "description": ""
+  },
+  "implementsPOLP": {
+    "type": "bool",
+    "description": ""
+  },
+  "implementsServerSideValidation": {
+    "type": "bool",
+    "description": ""
+  },
+  "implementsStrictHTTPValidation": {
+    "type": "bool",
+    "description": ""
+  },
+  "invokesScriptFilters": {
+    "type": "bool",
+    "description": ""
+  },
+  "isEncrypted": {
+    "type": "bool",
+    "description": ""
+  },
+  "isEncryptedAtRest": {
+    "type": "bool",
+    "description": ""
+  },
+  "isHardened": {
+    "type": "bool",
+    "description": ""
+  },
+  "isResilient": {
+    "type": "bool",
+    "description": ""
+  },
+  "providesConfidentiality": {
+    "type": "bool",
+    "description": ""
+  },
+  "providesIntegrity": {
+    "type": "bool",
+    "description": ""
+  },
+  "sanitizesInput": {
+    "type": "bool",
+    "description": ""
+  },
+  "tracksExecutionFlow": {
+    "type": "bool",
+    "description": ""
+  },
+  "usesCodeSigning": {
+    "type": "bool",
+    "description": ""
+  },
+  "usesEncryptionAlgorithm": {
+    "type": "text",
+    "description": ""
+  },
+  "usesMFA": {
+    "type": "bool",
+    "description": ""
+  },
+  "usesParameterizedInput": {
+    "type": "bool",
+    "description": ""
+  },
+  "usesSecureFunctions": {
+    "type": "bool",
+    "description": ""
+  },
+  "usesStrongSessionIdentifiers": {
+    "type": "bool",
+    "description": ""
+  },
+  "usesVPN": {
+    "type": "bool",
+    "description": ""
+  },
+  "validatesContentType": {
+    "type": "bool",
+    "description": ""
+  },
+  "validatesHeaders": {
+    "type": "bool",
+    "description": ""
+  },
+  "validatesInput": {
+    "type": "bool",
+    "description": ""
+  },
+  "verifySessionIdentifiers": {
+    "type": "bool",
+    "description": ""
+  }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "input": "Implements API",
+    "condition": "implementsAPI"
+  },
+  {
+    "input": "Uses SQL",
+    "condition": "isSql"
+  },
+  {
+    "input": "Environment",
+    "condition": "environment"
+  }
+]
