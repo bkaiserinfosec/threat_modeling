@@ -378,5 +378,51 @@ class ThreatModeler(object):
                             solutions.append(new)
                 line_count += 1
         return solutions
+    
+    def read_questions_csv(self):
+        questions = {}
+        with open('vr/threat_modeling/questions.csv', 'r', errors='ignore') as f_in:
+            csv_lines = csv.reader(f_in)
+            line_count = 0
+            for l in csv_lines:
+                if line_count != 0:
+                    questions[l[0]] = {
+                        'question': l[1],
+                        'condition_applied': l[2],
+                        'options': l[3],
+                        'type': l[4],
+                        'prerequisites': l[5],
+                        'targets': ", ".join(l[6]) if ',' in l[6] else l[6],
+                        'produces': l[7]
+                    }
+                line_count += 1
+        return questions
 
-ThreatModeler().run()
+    def read_in_responses(self, form):
+        entities = []
+        questions = self.read_questions_csv()
+        for q in questions:
+            name = questions[q]['question']
+            if name in form:
+                val = form[name]
+                produces = questions[q]['produces']
+                if produces:
+                    if produces == 'Elements':
+                        entities.append(val)
+                        self.elements[val] = {'conditions': [], 'threats': [],
+                                                       'data': {'formats': [], 'categories': [], 'classification': ''}}
+                        # The type of review: Application, System, Network, Other
+                        self.elements[val]['Type'] = 'Application'
+        for e in self.elements:
+            elem_type = self.elements[e]['Type']
+            for q in questions:
+                name = questions[q]['question']
+                if name in form:
+                    val = form[name]
+                    targets = questions[q]['targets']
+                    if elem_type in targets:
+                        print()
+        print()
+
+
+# ThreatModeler().run()
